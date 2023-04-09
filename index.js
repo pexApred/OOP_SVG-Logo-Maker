@@ -1,8 +1,13 @@
-const inquirer = require ('inquirer');
-const fs = require ('fs');
-const generateSCG = require ('./lib/generateSVG.js');
-const shapes = require ('./lib/shapes.js');
+const { promptUser } = require('./lib/prompt.js');
+const { generateSVG } = require('./lib/generateSVG.js');
 
-const questions = [
-    
-]
+promptUser()
+    .then((userData) => {
+        return generateSVG(userData);
+    })
+    .then (() => {
+        console.log('Generated logo.svg');
+    })
+    .catch((err) => {
+        console.error(err);
+    });
