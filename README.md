@@ -1,4 +1,4 @@
-# <OOP_SVG-Logo-Maker>
+# OOP_SVG-Logo-Maker
 
 ## Description
 
